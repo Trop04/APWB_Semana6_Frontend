@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+/* Login */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.10);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+/* Alerts */
+.alert {
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: .9rem;
+}
+.alert-warning { background: #fff8e1; border: 1px solid #ffe082; color: #6d4c00; }
+.alert-error   { background: #fdecea; border: 1px solid #f5c6cb; color: #7b1c1c; }
+
+/* Form fields */
+.field { margin-bottom: 1.2rem; }
+
+.field label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+  color: #444;
+}
+
+.field input {
+  width: 100%;
+  padding: .65rem .9rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: .95rem;
+  transition: border-color .2s;
+  outline: none;
+}
+.field input:focus   { border-color: #4f46e5; }
+.field input.input-error { border-color: #e53935; }
+
+.field-error {
+  display: block;
+  color: #e53935;
+  font-size: .78rem;
+  margin-top: .3rem;
+}
+
+/* Botones  */
+.btn-primary {
+  width: 100%;
+  padding: .75rem;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  transition: background .2s;
+}
+.btn-primary:hover:not(:disabled) { background: #4338ca; }
+.btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+
+.btn-secondary {
+  padding: .45rem 1rem;
+  background: transparent;
+  color: #4f46e5;
+  border: 1.5px solid #4f46e5;
+  border-radius: 8px;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-secondary:hover { background: #ede9fe; }
+
+/* Spinner */
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Dashboard */
+.dashboard-wrapper { min-height: 100vh; }
+
+.dashboard-header {
+  background: #4f46e5;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.dashboard-header h1 { font-size: 1.2rem; }
+.user-info { display: flex; align-items: center; gap: 1rem; }
+
+.dashboard-content { padding: 2rem; }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  padding: 1.5rem 2rem;
+  max-width: 560px;
+}
+.card h2 { margin-bottom: 1rem; font-size: 1.1rem; }
+.card p  { margin-bottom: .6rem; line-height: 1.6; }
+.card code {
+  background: #f0f2f5;
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  font-size: .88rem;
+}
+.hint { color: #666; font-size: .85rem; }

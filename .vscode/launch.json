@@ -15,6 +15,13 @@
       "request": "launch",
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
-    }
+    },
+    {
+            "name": "Launch index.html",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "file": "${workspaceFolder}/index.html"
+        }
   ]
 }
