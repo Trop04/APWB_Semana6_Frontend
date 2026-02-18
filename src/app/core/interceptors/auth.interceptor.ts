@@ -25,7 +25,7 @@ export const authInterceptor: HttpInterceptorFn = (
 
   return next(cloned).pipe(
     catchError((err: HttpErrorResponse) => {
-      // 401 en ruta protegida → sesión expirada
+      // 401 si la ruta está protegida, expira la sesión
       if (err.status === 401 && !req.url.includes('/auth/login')) {
         authService.forceLogout();
       }
